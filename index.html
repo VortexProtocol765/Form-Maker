@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mil Form Maker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "var(--primary-color, #4ade80)",
+                        "primary-hover": "var(--primary-hover, #22c55e)",
+                        "primary-dark": "var(--primary-dark, #166534)",
+                        "background": "#0a100a",
+                        "surface": "#141e14",
+                        "surface-accent": "#1c2a1c",
+                        "border-slate": "#243424",
+                    },
+                    fontFamily: {
+                        "display": ["var(--font-family, Poppins)", "sans-serif"]
+                    },
+                    keyframes: {
+                        'fade-up': {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        'scale-in': {
+                            '0%': { opacity: '0', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        }
+                    },
+                    animation: {
+                        'fade-up': 'fade-up 0.4s ease-out forwards',
+                        'scale-in': 'scale-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        :root {
+            --primary-color: #4ade80;
+            --primary-hover: #22c55e;
+            --primary-dark: #166534;
+            --font-family: 'Poppins';
+            --base-font-size: 16px;
+        }
+
+        /* Applying the base font size to html makes rem units scale the entire UI */
+        html {
+            font-size: var(--base-font-size);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        
+        body { 
+            background-color: #0a100a; 
+            color: #ffffff; 
+            font-family: var(--font-family), sans-serif;
+        }
+
+        input::placeholder, textarea::placeholder { color: #6b826b !important; }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
+  }
+}
+</script>
+</head>
+<body class="font-display antialiased">
+    <div id="root"></div>
+</body>
+</html>

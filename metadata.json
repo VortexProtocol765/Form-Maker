@@ -1,0 +1,7 @@
+{
+  "name": "Form Maker",
+  "description": "A smart form management platform that uses Gemini AI to generate, fill, and export professional templates for site inspections, healthcare, and business reports.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
